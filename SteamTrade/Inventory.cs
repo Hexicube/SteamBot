@@ -77,6 +77,11 @@ namespace SteamTrade
             return Items.Where(item => item.Defindex == defindex).ToList();
         }
 
+        public int GetNumItemsByDefindex (int defindex)
+        {
+            return Items.Count(item => item.Defindex == defindex);
+        }
+
         public class Item
         {
             public int AppId = 440;
